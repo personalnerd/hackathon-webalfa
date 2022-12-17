@@ -1,0 +1,46 @@
+// variables
+$primary-color: #87373e;
+$primary-btn-color: #fa5464;
+$primary-btn-hover-color: #792229;
+$primary-btn-active-color: #bd1c29;
+$header-bg-color: #792229;
+$light-color: #f8ecec;
+$footer-text-color: rgba(135, 55, 62, 0.5);
+
+// general
+body {
+  background-color: $light-color;
+}
+footer {
+  color: $footer-text-color;
+}
+// index
+[data-page='index'] {
+  header {
+    background-color: $header-bg-color;
+    min-height: 400px;
+    height: 50vh;
+    color: $light-color;
+
+    img {
+      max-width: 217px;
+      width: 100%;
+    }
+  }
+}
+
+// customize bootstrap
+.btn-primary {
+  background-color: $primary-btn-color;
+  border-color: $primary-btn-color;
+
+  &:hover {
+    background-color: $primary-btn-hover-color;
+    border-color: $primary-btn-hover-color;
+  }
+
+  &:first-child:active {
+    background-color: $primary-btn-active-color;
+    border-color: $primary-btn-active-color;
+  }
+}
