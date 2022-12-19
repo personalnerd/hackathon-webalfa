@@ -1,0 +1,10 @@
+{
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".css",
+      "savePath": "/assets/css"
+    }
+  ],
+  "php.validate.executablePath": "C:\\xampp\\php\\php.exe"
+}
