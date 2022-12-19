@@ -9,6 +9,12 @@ Linguagens e frameworks escolhidos:
 - HTML/CSS/SASS
 - Bootstrap
 
+O sistema está publicado e funcionando no endereço https://personalnerd.net.br/meuimc
+Para testar o sistema:
+
+- User: admin
+- Senha: 4dm1n\*
+
 ## Live Sass
 
 A pasta `.vscode` deveria estar no `gitignore` para não ser versionada, mas eu mantive no projeto para mostrar a configuração utilizada com o plugin Live Sass que utilizo no VS Code. Assim mantenho os arquivos SCSS organizados em uma pasta enquanto aponto para o plugin criar os arquivos `.css` em uma pasta separada.
