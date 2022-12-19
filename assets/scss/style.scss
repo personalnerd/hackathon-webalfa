@@ -14,18 +14,41 @@ body {
 footer {
   color: $footer-text-color;
 }
-// index
-[data-page='index'] {
-  header {
+
+header {
+  background-color: $primary-color;
+  color: $light-color;
+
+  #top-header {
     background-color: $header-bg-color;
+  }
+
+  #primary-logo {
+    max-width: 217px;
+    width: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+
+  &:hover {
+    color: $primary-btn-color;
+  }
+}
+
+[data-page]:not([data-page='home']) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+// home
+[data-page='home'] {
+  header {
     min-height: 400px;
     height: 50vh;
-    color: $light-color;
-
-    img {
-      max-width: 217px;
-      width: 100%;
-    }
   }
 }
 
@@ -42,5 +65,107 @@ footer {
   &:first-child:active {
     background-color: $primary-btn-active-color;
     border-color: $primary-btn-active-color;
+  }
+}
+
+// negative margins
+@mixin negative-margins($direction) {
+  @if $direction {
+    @if $direction == 'x' {
+      &-n1 {
+        margin-right: -0.25rem !important;
+        margin-left: -0.25rem !important;
+      }
+      &-n2 {
+        margin-right: -0.5rem !important;
+        margin-left: -0.5rem !important;
+      }
+      &-n3 {
+        margin-right: -1rem !important;
+        margin-left: -1rem !important;
+      }
+      &-n4 {
+        margin-right: -1.5rem !important;
+        margin-left: -1.5rem !important;
+      }
+      &-n5 {
+        margin-right: -3rem !important;
+        margin-left: -3rem !important;
+      }
+    } @else if $direction == 'y' {
+      &-n1 {
+        margin-top: -0.25rem !important;
+        margin-bottom: -0.25rem !important;
+      }
+      &-n2 {
+        margin-top: -0.5rem !important;
+        margin-bottom: -0.5rem !important;
+      }
+      &-n3 {
+        margin-top: -1rem !important;
+        margin-bottom: -1rem !important;
+      }
+      &-n4 {
+        margin-top: -1.5rem !important;
+        margin-bottom: -1.5rem !important;
+      }
+      &-n5 {
+        margin-top: -3rem !important;
+        margin-bottom: -3rem !important;
+      }
+    } @else {
+      &-n1 {
+        margin-#{$direction}: -0.25rem !important;
+      }
+      &-n2 {
+        margin-#{$direction}: -0.5rem !important;
+      }
+      &-n3 {
+        margin-#{$direction}: -1rem !important;
+      }
+      &-n4 {
+        margin-#{$direction}: -1.5rem !important;
+      }
+      &-n5 {
+        margin-#{$direction}: -3rem !important;
+      }
+    }
+  } @else {
+    &-n1 {
+      margin: -0.25rem !important;
+    }
+    &-n2 {
+      margin: -0.5rem !important;
+    }
+    &-n3 {
+      margin: -1rem !important;
+    }
+    &-n4 {
+      margin: -1.5rem !important;
+    }
+    &-n5 {
+      margin: -3rem !important;
+    }
+  }
+}
+
+.m {
+  &t {
+    @include negative-margins('top');
+  }
+  &b {
+    @include negative-margins('bottom');
+  }
+  &s {
+    @include negative-margins('left');
+  }
+  &e {
+    @include negative-margins('right');
+  }
+  &x {
+    @include negative-margins('x');
+  }
+  &y {
+    @include negative-margins('y');
   }
 }
